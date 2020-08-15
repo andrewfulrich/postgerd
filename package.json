@@ -1,6 +1,6 @@
 {
   "name": "postgerd",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generate erd diagrams for postgres",
   "main": "index.js",
   "dependencies": {

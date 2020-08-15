@@ -17,17 +17,17 @@ Also make sure you have [postgres connection environment variables](https://www.
 ## To output an svg:
 
 ```
-npx postgerd -- -o myOutput.svg
+npx postgerd -o myOutput.svg
 ```
 
 ## To output a plantuml file:
 
 ```
-npx postgerd -- -o myOutput.plantuml --plantuml
+npx postgerd -o myOutput.plantuml --plantuml
 ```
 
 ## To output a nomnoml file:
 
 ```
-npx postgerd -- -o myOutput.nomnoml --nomnoml
+npx postgerd -o myOutput.nomnoml --nomnoml
 ```
