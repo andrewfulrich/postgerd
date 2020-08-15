@@ -1,0 +1,26 @@
+{
+  "name": "postgerd",
+  "version": "1.0.0",
+  "description": "Generate erd diagrams for postgres",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "minimist": "^1.2.5",
+    "pg": "^8.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/andrewfulrich/postgerd.git"
+  },
+  "author": "Andrew Ulrich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewfulrich/postgerd/issues"
+  },
+  "homepage": "https://github.com/andrewfulrich/postgerd#readme"
+}
