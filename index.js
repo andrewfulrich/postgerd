@@ -80,10 +80,11 @@ ${buildForeignKeys(columns)}
 `
   if(argv.o !== undefined) {
     fs.writeFileSync(argv.o,erd)
+    console.log('ERD has been written to '+argv.o)
   } else {
     console.log(erd)
   }
-  //end()
+  process.exit()
 }
 
 function buildForeignKeys(columns) {
