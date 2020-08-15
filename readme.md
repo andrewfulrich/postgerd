@@ -9,7 +9,7 @@ Note: Foreign key connections across schemas are only supported in the PlantUML 
 To install:
 
 ```
-npm install postgerd
+npm install --save-dev postgerd
 ```
 
 Also make sure you have [postgres connection environment variables](https://www.postgresql.org/docs/9.3/libpq-envars.html) set (that is, either DATABASE_URL or PGUSER,PGPASSWORD,PGHOST, and PGDATABASE).
@@ -17,17 +17,17 @@ Also make sure you have [postgres connection environment variables](https://www.
 ## To output an svg:
 
 ```
-npx postgerd -o myOutput.svg
+npx postgerd -- -o myOutput.svg
 ```
 
 ## To output a plantuml file:
 
 ```
-npx postgerd -o myOutput.plantuml --plantuml
+npx postgerd -- -o myOutput.plantuml --plantuml
 ```
 
 ## To output a nomnoml file:
 
 ```
-npx postgerd -o myOutput.nomnoml --nomnoml
+npx postgerd -- -o myOutput.nomnoml --nomnoml
 ```
