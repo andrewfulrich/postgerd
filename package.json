@@ -1,6 +1,6 @@
 {
   "name": "postgerd",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate erd diagrams for postgres",
   "main": "index.js",
   "dependencies": {
@@ -15,7 +15,7 @@
     "start": "node index.js"
   },
   "bin": {
-    "postgerd": "node index.js"
+    "postgerd": "./index.js"
   },
   "repository": {
     "type": "git",
