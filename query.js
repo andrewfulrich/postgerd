@@ -31,4 +31,4 @@ function query(queryOrObject) {
   return pool.query(queryOrObject)
 }
 
-module.exports=query
+module.exports={query,end:pool.end}
