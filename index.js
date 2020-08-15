@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const fs=require('fs')
 const nomnoml=require('nomnoml')
 const getNomNoml=require('./getNomNoml')
