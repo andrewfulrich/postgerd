@@ -20,6 +20,12 @@ Also make sure you have [postgres connection environment variables](https://www.
 npx postgerd -o myOutput.svg
 ```
 
+## To restrict it to a single schema in the database
+
+```
+npx postgerd -o myOutput.svg --schema my_schema
+```
+
 ## To output a plantuml file:
 
 ```

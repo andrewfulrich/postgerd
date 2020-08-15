@@ -73,7 +73,7 @@ async function getInfo() {
     `
   });
 
-  const columns=result.rows
+  const columns=result.rows.filter(col=>argv.schema ? col.table_schema==argv.schema : true)
   let stringOutput;
   if(argv.plantuml !== undefined) {
     stringOutput=getPlantUml(columns)
