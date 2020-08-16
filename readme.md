@@ -1,5 +1,7 @@
 # PostgERD
 
+*"Show me your flowchart and conceal your tables, and I shall continue to be mystified. Show me your tables, and I won't usually need your flowchart; it'll be obvious." - Fred Brooks, The Mythical Man-Month*
+
 PostgERD connects to your postgres database with environment variable credentials (using [dotenv](https://github.com/motdotla/dotenv#readme) if needed) and generates an ERD svg from what it finds there. Can also output [PlantUML](https://plantuml.com/) or [nomnoml](http://www.nomnoml.com/). Supports multiple db schemas.
 
 Note: Foreign key connections across schemas are only supported in the PlantUML output.
