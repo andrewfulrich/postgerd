@@ -66,7 +66,7 @@ async function getInfo() {
       fks.foreign_table_schema|| '.' ||fks.foreign_table_name|| '.' ||fks.foreign_column_name FROM foreign_keys fks
       WHERE fks.table_schema=table_schema
       AND fks.table_name=c.table_name
-      AND fks.column_name=c.column_name) AS references
+      AND fks.column_name=c.column_name LIMIT 1) AS references
     FROM information_schema.columns c
 	WHERE table_schema not in ('information_schema','pg_catalog')
     ORDER BY table_schema, table_name, ordinal_position
