@@ -48,23 +48,23 @@ async function getInfo() {
 		tc.table_schema not in ('information_schema','pg_catalog')
     )
     SELECT 
-    table_schema,
-    table_name,
-    column_name,
-    column_default,
-    is_nullable='YES' AS is_nullable,
-    data_type,
-    character_maximum_length,
-    numeric_precision,
-    numeric_scale,
-    ordinal_position,
+    c.table_schema,
+    c.table_name,
+    c.column_name,
+    c.column_default,
+    c.is_nullable='YES' AS is_nullable,
+    c.data_type,
+    c.character_maximum_length,
+    c.numeric_precision,
+    c.numeric_scale,
+    c.ordinal_position,
     (SELECT EXISTS (SELECT * FROM primary_keys pks WHERE 
-      pks.table_schema=table_schema 
+      pks.table_schema=c.table_schema 
       AND pks.table_name=c.table_name
       AND pks.column_name=c.column_name)) as is_primary_key,
     (SELECT 
       fks.foreign_table_schema|| '.' ||fks.foreign_table_name|| '.' ||fks.foreign_column_name FROM foreign_keys fks
-      WHERE fks.table_schema=table_schema
+      WHERE fks.table_schema=c.table_schema
       AND fks.table_name=c.table_name
       AND fks.column_name=c.column_name LIMIT 1) AS references
     FROM information_schema.columns c
